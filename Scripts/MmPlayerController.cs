@@ -39,7 +39,7 @@ public class MmPlayerController : MonoBehaviour
     void Start()
     {
         //GameControllerを探す
-        gameController = GameObject.FindWithTag("Item");
+        gameController = GameObject.FindWithTag("GameController");
 
     }
 
@@ -113,13 +113,7 @@ public class MmPlayerController : MonoBehaviour
         {
             Destroy(collision.gameObject);
 
-            //gameController.SendMessage("ItemScore");
-
-            //スコアが10増える
-            //score += 10;
-
-            //スコア表示を更新
-            //scoreText.text = "Score : " + score;
+            gameController.SendMessage("ItemScore");
         }
     }
 

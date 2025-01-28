@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3291142822375492683}
   - component: {fileID: 1510901752101458755}
-  - component: {fileID: 4503672687628007229}
+  - component: {fileID: 2198901660847631342}
   m_Layer: 0
   m_Name: Block
   m_TagString: Untagged
@@ -46,10 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99effbfc57471e54596ad829fd437c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 1
   startPosition: 9
   endPosition: -4
---- !u!114 &4503672687628007229
+--- !u!114 &2198901660847631342
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,7 +58,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1303440457938090596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79ba4387080e9974cb7a81e006f9661c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6067db3f84a63764fbded2f3976512bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   minHeight: 1.5
