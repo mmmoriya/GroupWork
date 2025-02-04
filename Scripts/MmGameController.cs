@@ -24,12 +24,33 @@ public class MmGameController : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI stateText;
 
+    public AudioSource audioSource;
+    
+    public AudioClip itemSound;
+    public AudioClip overSound;
+
+
     // Start is called before the first frame update
     void Start()
     {
         //開始と同時にReadyステータスにする
         Ready();
 
+        // AudioSourceコンポーネントを取得
+        AudioSource soundPlayer= GetComponent<AudioSource>();
+
+        // オーディオソースが取得できているか確認
+        if(soundPlayer != null)
+        {
+            // オーディオを再生
+            soundPlayer.Play();
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Time.timeScale == 0) return;
     }
 
     // Update is called once per frame
@@ -76,8 +97,7 @@ public class MmGameController : MonoBehaviour
 
         //ステータスの文字を表示する
         stateText.gameObject.SetActive(true);
-        stateText.text = "Ready";
-
+        stateText.text = "Ready \n \n Tap to start";
     }
 
     void GameStart()
@@ -117,6 +137,11 @@ public class MmGameController : MonoBehaviour
         //ゲームオーバーというステータスを表示
         stateText.gameObject.SetActive(true);
         stateText.text = "GameOver";
+
+        // GameOver BGM再生
+        AudioSource soundPlayer = GetComponent<AudioSource>();
+        soundPlayer.Stop();
+        soundPlayer.PlayOneShot(overSound);
     }
 
     void Reload()
@@ -147,5 +172,48 @@ public class MmGameController : MonoBehaviour
         //スコア表示を更新
         scoreText.text = "Score : " + score;
 
+        // Item BGM再生
+        AudioSource soundPlayer = GetComponent<AudioSource>();
+        //soundPlayer.Stop();
+        soundPlayer.PlayOneShot(itemSound);
+    }
+
+    public void ChangeScene()
+    {
+        SceneManager.LoadScene("Title");
+    }
+
+    public void ChangeSceneGame()
+    {
+        SceneManager.LoadScene("MmMain");
+    }
+
+    public void PauseButton()
+    {
+        GameObject pausePanel = GameObject.Find("Pause");
+        pausePanel.GetComponent<Canvas>().sortingOrder = 10;
+
+        Time.timeScale = 0;
+
+        //BGM停止
+        AudioSource soundPlayer = GetComponent<AudioSource>();
+        soundPlayer.Stop();
+    }
+
+    public void ContinueButton()
+    {
+        GameObject pausePanel = GameObject.Find("Pause");
+        pausePanel.GetComponent<Canvas>().sortingOrder = -5;
+
+        Time.timeScale = 1;
+
+        //BGM再生
+        AudioSource soundPlayer = GetComponent<AudioSource>();
+        soundPlayer.Play();
+    }
+
+    public void RetireButton()
+    {
+        SceneManager.LoadScene("MmMain");
     }
 }

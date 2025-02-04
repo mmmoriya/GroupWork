@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3291142822375492683
 Transform:
   m_ObjectHideFlags: 0
@@ -80,6 +80,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2594127008125145206, guid: 1e590134dd903144794d17ada51ddd73, type: 3}
+      propertyPath: m_Size.y
+      value: 3.626322
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594127008125145206, guid: 1e590134dd903144794d17ada51ddd73, type: 3}
+      propertyPath: m_Offset.y
+      value: -3.2656417
+      objectReference: {fileID: 0}
     - target: {fileID: 3450834941485311247, guid: 1e590134dd903144794d17ada51ddd73, type: 3}
       propertyPath: m_Name
       value: Root
@@ -131,6 +139,22 @@ PrefabInstance:
     - target: {fileID: 8019606813321698544, guid: 1e590134dd903144794d17ada51ddd73, type: 3}
       propertyPath: m_TagString
       value: Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 8126183279808166292, guid: 1e590134dd903144794d17ada51ddd73, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0855753
+      objectReference: {fileID: 0}
+    - target: {fileID: 8126183279808166292, guid: 1e590134dd903144794d17ada51ddd73, type: 3}
+      propertyPath: m_Size.y
+      value: 3.652673
+      objectReference: {fileID: 0}
+    - target: {fileID: 8126183279808166292, guid: 1e590134dd903144794d17ada51ddd73, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.5046841
+      objectReference: {fileID: 0}
+    - target: {fileID: 8126183279808166292, guid: 1e590134dd903144794d17ada51ddd73, type: 3}
+      propertyPath: m_Offset.y
+      value: 4.296333
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

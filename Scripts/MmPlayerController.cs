@@ -108,8 +108,12 @@ public class MmPlayerController : MonoBehaviour
             //死亡判定をtrue
             isDead = true;
         } 
+        
+    }
 
-        else if(collision.gameObject.CompareTag("Item"))
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Item"))
         {
             Destroy(collision.gameObject);
 

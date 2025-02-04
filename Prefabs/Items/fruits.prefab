@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 6477094136484547821}
   - component: {fileID: 7960826105422774310}
   - component: {fileID: 7446512061485080935}
+  - component: {fileID: 4522567965045944139}
   m_Layer: 0
-  m_Name: Cherries_0
+  m_Name: fruits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,3 +121,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.0000000340598}
   serializedVersion: 2
   m_Radius: 0.0863753
+--- !u!114 &4522567965045944139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321154229735126278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b66c2a1462e694bab3565887c5a471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fruits:
+  - {fileID: -4570538037665054336, guid: 07ca1ac02fe5da34fb095d0a6681ebbe, type: 3}
+  - {fileID: 4138223980208024357, guid: efabc5d9feba4ba46bbd5b7213c626a2, type: 3}
+  - {fileID: 4121880872312635667, guid: dfc7bbb41d069d044bbb83a7e4d083a1, type: 3}
+  - {fileID: 837517196756356485, guid: 627a6a8da3c02ac4d8fdfebd2813a14a, type: 3}
